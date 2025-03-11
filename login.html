@@ -1,0 +1,109 @@
+<!DOCTYPE html>     <!-- login.html -->
+<html lang="en">
+<head>
+    <title>LOGIN | Fashion Science</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styling.css">
+    <style>
+        input{
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 5px 10px;
+            height: 30px;
+            width: 250px;
+            font-size: 16px;
+        }
+        #login{
+            background-color: #f4f0ec;
+            margin: auto;
+            width: 350px;
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+        #login a {
+            display: block; 
+            text-align: center; 
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+        #login a:hover {
+            text-decoration: underline;
+        }
+        #login button {
+            background-color: #ff8c69; 
+            color: #fff; 
+            border: none; /* Remove border */
+            width: 150px;
+            height: 35px;
+            font-size: 16px; 
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #login button:hover {
+            background-color: #e9967a;
+        }
+        #login input[type="checkbox"] {
+            width: 12px;
+            height: 12px;
+            vertical-align:middle;
+        }
+        #login label[for="terms"] {
+            font-size: 12px;
+            margin-left: 3px;
+            text-align: left; 
+            vertical-align:middle;
+        }
+        input::placeholder {
+            color: darkgrey;
+        }
+    </style> 
+    <script type="text/javascript" src="common.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <a href="index.php"><img src="logo.jpg" height="100" width="311"></a>
+        </header>
+        <nav>
+            <div id="left-nav">
+                <a class="active" href="index.php">What's New</a>
+                <a href="product_page.php">All Product</a>
+            </div>
+            <div id="right-nav">
+                <img src="login.jpg" id="profile-icon" onclick="showDropdown()" width="46" height="40">
+                    <div id="dropdown">
+                        <a href="myorders.php">My Order</a>
+                        <a href="#" onclick="signOut()">Sign Out</a>
+                    </div>
+                <img src="shopping-cart.jpg" onclick="showCart()" width="48" height="40">
+            </div>
+        </nav>
+        <div id="content">
+            <h2>Login</h2>
+            <div id="login">
+                <form action="login.php" method="post">
+                    <input type="email" id="email" name="email" placeholder="Email*" required><br><br>
+                    <input type="password" id="password" name="password" placeholder="Password*" required><br><br>
+                    <a href="forgot_password.html">Forgot password</a>
+                    <a href="create_account.html">Create account</a><br>
+                    <button type="submit" id="confirmButton">Login</button>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <small>
+                <i>
+                Copyright &copy; 2023 Fashion Science<br>
+                <a href="mailto:support@fashionscience.com">support@fashionscience.com</a>
+                <br><br>
+                </i>
+                <a href="index.php">Home</a> | <a href="about_us.php">About Us</a> | <a href="faq.php">FAQ</a>
+            </small>
+        </footer>
+    </div>
+    <script>
+    </script>
+</body>
+</html>

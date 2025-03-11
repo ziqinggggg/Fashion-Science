@@ -1,0 +1,159 @@
+<!DOCTYPE html>     <!-- create_account.html -->
+<html lang="en">
+<head>
+    <title>CREATE ACCOUNT | Fashion Science</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styling.css">
+    <style>
+        input{
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 5px 10px;
+            height: 30px;
+            width: 250px;
+            font-size: 16px;
+        }
+        #login{
+            background-color: #f4f0ec;
+            margin: auto;
+            width: 550px;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+        #login a {
+            display: block; 
+            text-align: center; 
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+        #login a:hover {
+            text-decoration: underline;
+        }
+        #login button {
+            background-color: #ff8c69; 
+            color: #fff; 
+            border: none; /* Remove border */
+            width: 150px;
+            height: 35px;
+            font-size: 16px; 
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #login button:hover {
+            background-color: #e9967a;
+        }
+        #login input[type="checkbox"] {
+            width: 15px;
+            height: 15px;
+        }
+        #login label[for="terms"] {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        input::placeholder {
+            color: darkgrey;
+        }
+        #dob::-webkit-datetime-edit, 
+        #dob::-webkit-datetime-edit-fields-wrapper,
+        #dob::-webkit-datetime-edit-text {
+            color: darkgrey; 
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .form-group label {
+            font-size: 16px;
+            padding-bottom: 5px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .form-group input[type="checkbox"] {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style> 
+    <script type="text/javascript" src="common.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <a href="index.php"><img src="logo.jpg" height="100" width="311"></a>
+        </header>
+        <nav>
+            <div id="left-nav">
+                <a class="active" href="index.php">What's New</a>
+                <a href="product_page.php">All Product</a>
+            </div>
+            <div id="right-nav">
+                <div id="right-nav">
+                    <img src="login.jpg" id="profile-icon" onclick="showDropdown()" width="46" height="40">
+                        <div id="dropdown">
+                            <a href="myorders.php">My Order</a>
+                            <a href="#" onclick="signOut()">Sign Out</a>
+                        </div>
+                    <img src="shopping-cart.jpg" onclick="showCart()" width="48" height="40">
+                </div>
+        </nav>
+        <div id="content">
+            <h2>Sign up</h2>
+            <div id="login">
+                <form action="create_account.php" method="post">
+                    <div class="form-group">
+                        <label for="name">*Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dob">*Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">*Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">*Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">By signing up, I agree to the terms of service and privacy policy.</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" id="confirmButton">Create</button>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <a href="login.html">Back to the login page</a>
+                    </div>
+                </form>
+            </div>            
+        </div>
+        <footer>
+            <small>
+                <i>
+                Copyright &copy; 2023 Fashion Science<br>
+                <a href="mailto:support@fashionscience.com">support@fashionscience.com</a>
+                <br><br>
+                </i>
+                <a href="index.php">Home</a> | <a href="about_us.php">About Us</a> | <a href="faq.php">FAQ</a>
+            </small>
+        </footer>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>
