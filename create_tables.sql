@@ -1,4 +1,4 @@
-USE fashionscience;
+USE 4602837_fashionscience;
 
 DROP TABLE IF EXISTS Users;
 DROP TABLE IF EXISTS Products;

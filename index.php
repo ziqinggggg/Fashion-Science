@@ -54,6 +54,7 @@ $randomisedSaleProducts = array_slice($randomisedSaleProducts, 0, 6);
 <head>
     <title>HOME | Fashion Science</title>
     <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="favicon2.ico">
     <link rel="stylesheet" href="styling.css">
     <style>
 
