@@ -25,21 +25,21 @@ CREATE TABLE Users (
 
 -- INSERT INTO Users (Username, Birthday, Email, Password, FirstName, LastName, Address)
 -- VALUES
---     ('user123', '1990-01-15', 'user123@email.com', 'password123', 'Jane', 'Doe', '123 Orchard Rd'),
---     ('customer1', '1985-06-10', 'customer1@email.com', 'pass123', 'Alice', 'Smith', '456 Marina Bay'),
---     ('shopper42', '1998-03-21', 'shopper42@email.com', 'secret123', 'Robert', 'Johnson', '789 Johnson St'),
---     ('user456', '1992-11-30', 'user456@email.com', 'password456', 'John', 'Smith', '789 Park Ave'),
---     ('shopper99', '1987-09-05', 'shopper99@email.com', 'mypassword', 'Emily', 'Wilson', '234 Orchard Rd'),
---     ('customer2', '1994-07-19', 'customer2@email.com', 'pass456', 'David', 'Johnson', '567 Marina Bay Rd');
+--     ('Sophia', '1990-01-15', 'user123@email.com', 'password123', 'Sophia', 'Doe', '123 Orchard Rd'),
+--     ('Alice', '1985-06-10', 'customer1@email.com', 'pass123', 'Alice', 'Smith', '456 Marina Bay'),
+--     ('Robert', '1998-03-21', 'shopper42@email.com', 'secret123', 'Robert', 'Johnson', '789 Johnson St'),
+--     ('John', '1992-11-30', 'user456@email.com', 'password456', 'John', 'Smith', '789 Park Ave'),
+--     ('Emily', '1987-09-05', 'shopper99@email.com', 'mypassword', 'Emily', 'Wilson', '234 Orchard Rd'),
+--     ('Jane', '1994-07-19', 'customer2@email.com', 'pass456', 'Jane', 'Doe', '567 Marina Bay Rd');
 
 INSERT INTO Users (Username, Birthday, Email, Password, FirstName, LastName, Address)
 VALUES
-    ('user123', '1990-01-15', 'user123@email.com', '$2y$10$MW4crUlVEzjMU92pKSoJHe2SSWwmL2PSk.O0BEx.ChcvyS25i4Cd.', 'Jane', 'Doe', '123 Orchard Rd'),
-    ('customer1', '1985-06-10', 'customer1@email.com', '$2y$10$SFl5fVWUpjaOUl6Y1QkKCeKknyQc0/DivMuRaafxNcGAdXN133qxi', 'Alice', 'Smith', '456 Marina Bay'),
-    ('shopper42', '1998-03-21', 'shopper42@email.com', '$2y$10$RwkBXUdXSq4ywXtm0pQq0usZ6/k0/hxDBbMR0gLyagX8pCdHS7fXC', 'Robert', 'Johnson', '789 Johnson St'),
-    ('user456', '1992-11-30', 'user456@email.com', '$2y$10$IYqnx4K/7PzAvWbdvoSGVOEPF7ExjMpHC6JkSc3DLyyMYhbeBLnsK', 'John', 'Smith', '789 Park Ave'),
-    ('shopper99', '1987-09-05', 'shopper99@email.com', '$2y$10$FTYjddyfVJzHhCuV5JmiduqIN0cPEmDsu3gvMWQuy.DmJgw4AR0uW', 'Emily', 'Wilson', '234 Orchard Rd'),
-    ('customer666', '1994-07-19', 'customer666@email.com', '$2y$10$Hr/C.z686BDrj/UuTkLmLuPbJ16zFlA2SvWAgGRGKzwWrayQzotHG', 'David', 'Johnson', '567 Marina Bay Rd');
+    ('Sophia', '1990-01-15', 'user123@email.com', '$2y$10$MW4crUlVEzjMU92pKSoJHe2SSWwmL2PSk.O0BEx.ChcvyS25i4Cd.', 'Sophia', 'Doe', '123 Orchard Rd'),
+    ('Alice', '1985-06-10', 'customer1@email.com', '$2y$10$SFl5fVWUpjaOUl6Y1QkKCeKknyQc0/DivMuRaafxNcGAdXN133qxi', 'Alice', 'Smith', '456 Marina Bay'),
+    ('Robert', '1998-03-21', 'shopper42@email.com', '$2y$10$RwkBXUdXSq4ywXtm0pQq0usZ6/k0/hxDBbMR0gLyagX8pCdHS7fXC', 'Robert', 'Johnson', '789 Johnson St'),
+    ('John', '1992-11-30', 'user456@email.com', '$2y$10$IYqnx4K/7PzAvWbdvoSGVOEPF7ExjMpHC6JkSc3DLyyMYhbeBLnsK', 'John', 'Smith', '789 Park Ave'),
+    ('Emily', '1987-09-05', 'shopper99@email.com', '$2y$10$FTYjddyfVJzHhCuV5JmiduqIN0cPEmDsu3gvMWQuy.DmJgw4AR0uW', 'Emily', 'Wilson', '234 Orchard Rd'),
+    ('Jane', '1994-07-19', 'customer666@email.com', '$2y$10$Hr/C.z686BDrj/UuTkLmLuPbJ16zFlA2SvWAgGRGKzwWrayQzotHG', 'Jane', 'Doe', '567 Marina Bay Rd');
 
 
 CREATE TABLE Products (
@@ -125,7 +125,7 @@ VALUES
     (2, '2023-10-25 08:15:11', 'Delivered', 215.94),
     (2, '2023-10-28 14:30:11', 'Shipped', 123.97),
     (2, '2023-10-28 14:30:11', 'Pending', 69.97),
-    (6, '2023-10-28 14:30:11', 'Pending', 101.96);
+    (6, '2023-10-28 14:30:11', 'Completed', 101.96);
     
 
 CREATE TABLE OrderItems (
@@ -223,8 +223,9 @@ CREATE TABLE ShippingInformation (
 
 INSERT INTO ShippingInformation (UserID, FirstName, LastName, Address, PostalCode, ContactNumber)
 VALUES
-    (1, 'Jane', 'Doe', '123 Orchard Rd','238812', '33336666'),
-    (2, 'Alice', 'Smith', '456 Marina Bay Dr', '018930', '78945612');
+    (1, 'Sophia', 'Doe', '123 Orchard Rd','238812', '33336666'),
+    (2, 'Alice', 'Smith', '456 Marina Bay Dr', '018930', '78945612'),
+    (6, 'Jane', 'Doe', '123 Orchard Rd','238812', '33336666');
 
 CREATE TABLE PaymentInformation (
     PaymentInfoID INT PRIMARY KEY AUTO_INCREMENT,
@@ -237,5 +238,6 @@ CREATE TABLE PaymentInformation (
 
 INSERT INTO PaymentInformation (UserID, CardNumber, ExpiryDate, SecurityCode, FullName)
 VALUES
-    (1, '1234567898765432', '12/25', '123', 'Jane Doe'),
-    (2, '9876543212345678', '06/24', '456', 'Alice Smith');
+    (1, '1234567898765432', '12/27', '123', 'Sophia Doe'),
+    (2, '9876543212345678', '06/28', '456', 'Alice Smith'),
+    (6, '1234567898765432', '12/27', '123', 'Jane Doe');
